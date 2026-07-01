@@ -1,0 +1,49 @@
+.page-container {
+    width: 900px;
+    height: 1300px;
+    background-color: black; /* Set your desired background color */
+    padding: 75px; /* Adjust as needed */
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns */
+    gap: 5px; /* Adjust the gap between items */
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black; /* Set the background color for your grid items */
+    border: 1px solid black; /* Add border for clarity */
+    padding: 10px; 
+    /* Add padding for spacing */
+  }
+
+.spider {
+  position: absolute;
+  top: 45px;
+  left: 50%;
+  animation: walk 2s linear infinite alternate; 
+    transform: translateX(-50%);
+  width: 100px;
+  height: 100px; 
+  /* Adjust timing as needed */
+}
+
+@keyframes walk {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(100% - 50px)); 
+
+  }
+   
+    /*adjustspider/*
+    
+  
+
+  
+  /* Other styles for your text or objects can be added here */
