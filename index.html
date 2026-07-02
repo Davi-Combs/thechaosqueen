@@ -111,13 +111,19 @@ bottom: 1100px; right: 10px"
 alt="fing">
 
 
- <img id="images/hacked.jpg"
+<div id="floating-banner" style="position: absolute; 
+  bottom: 250px; right: 250px; z-index: 9999; cursor: pointer;" onclick="document.getElementById('floating-banner').style.display = 'none';">
+    <img src="images/hacked.jpg" alt="Click to dismiss" style="width: 600px; height: auto;">
+</div>
+
+  
+ <!--<img id="images/hacked.jpg"
   width="800px"900 500
   style="position: absolute; opacity: 0.5; 
   top: 150px; left: 100px;
    bottom: 1100px; right: 200px"
    alt="opaque"
-     onclick="moveImage()"/>
+     onclick="moveImage()"/>-->
 
   
  <img src="images/Scorpian.jpg"
