@@ -60,8 +60,8 @@ left: 20px;
     position: absolute;
     z-index: 99; /* Forces all bugs onto a high layer */
    pointer-events: none; /* Stops the bugs from blocking mouse clicks on your text/links */
-    width: 50px; /*Sets standard width */
-    height: 25px;  /*Sets standard height*/
+    width: 300px; /*Sets standard width */
+    height: 400px;  /*Sets standard height*/
       
   }
 
