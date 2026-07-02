@@ -1,7 +1,7 @@
 .page-container {
     position: relative; 
     overflow: hidden; 
-    width: 80%;
+    width: 90%;
     margin: 0 auto;        /* Centers your 80% box on the screen */
     background-color: #black;
     
@@ -37,9 +37,9 @@
   }
 
 
- /*#invisibleElement {
-opacity: 0; /* Start as invisible
-transition: opacity 0.3s; /* Smooth transition 
+ #invisibleElement {
+opacity: 0; /* Start as invisible*/
+transition: opacity 0.3s; /* Smooth transition */
 
 }
 
@@ -48,7 +48,7 @@ transition: opacity 0.3s; /* Smooth transition
 
 }
   /* Make visible */ 
-/*#hackedPic {
+#hackedPic {
      position: fixed;
      inset: 0;
      width: 100vw;
