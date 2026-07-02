@@ -1,8 +1,8 @@
 
   .page-container {
     position: relative; overflow: hidden; 
-    width: 100%;
-    height: 100%;
+    width: 200vh;
+    height: 200vh;
     background-color: black; /* Set your desired background color*/
     padding: 25px; /*Adjust as needed */
   }
@@ -76,8 +76,8 @@ transition: opacity 0.3s; /* Smooth transition
 
 .spider {
   position: absolute;
-  top: 45px;
-  left: 10%;
+  top: 45vh;
+  left: 10vh;
   animation: walk 2s linear infinite alternate; 
     transform: translateX(-50%);
   width: 100px;
