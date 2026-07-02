@@ -30,6 +30,7 @@
   }
 
   /* Makes iframes fill the pink boxes completely */
+  
   .container iframe {
     width: 100%;
     height: 100%;
@@ -47,30 +48,29 @@
     z-index:1;
     
   }
-  .spider {
-   position: absolute;
-   top: 10%;
-   left: 5%;
-   animation: walk 4s linear infinite. 
-  alternate; 
-  transform: translateX(-50%);
-  width: 100px;
-  height: 100px; 
-
-  /* Adjust timing as needed */
-
-}
+  
 
 
-@keyframes walk {
- 0% {
- transform: translateX(0);
-}
-100% {
-transform: translateX(calc(100% - 50pxy)); 
+.walking-spider { 
+  position: fixed; top: 0; left: -150px; 
+  /* Start off-screen to the left */
+  z-index: 9999; 
+  /* Ensure it stays on top of all other content */ 
+  width: 100px; /* Adjust the size of your spider */ 
+  animation: crawl 12s linear infinite, walk 0.5s ease-in-out infinite alternate;
 
- /*adjustspider*/
-}  
+} /* Controls the spider moving across the screen */ 
+  @keyframes crawl { 
+  0% { 
+    left: -150px;
+    transform: translateY(0); 
+  } 100% { 
+    left: 100vw; 
+    /* Move completely across the screen */ 
+    transform: translateY(0); 
+  } /* Controls the up/down walking motion (legs/body) */ @keyframes walk { 0% { transform: translateY(0) rotate(0deg); } 100% { transform: translateY(-10px) rotate(5deg); /* Slight bob and tilt */ } }
+
+
 
 </head>
   
@@ -92,7 +92,7 @@ transform: translateX(calc(100% - 50pxy));
     
     <div class="container"><iframe src="https://vclock.com" frameborder="0"></iframe></div>
 
-    <div class="container"><iframe src="https://davi-combs.github.io/purplepassion/" frameborder="0"></iframe></div>
+    <div class="container"><iframe src="https://davi-combs.gihub.io/purplepassion/" frameborder="0"></iframe></div>
     
     <div class="container"><iframe src="https://davi-combs.github.io/Minesweeper/" frameborder="0"></iframe></div>
     
