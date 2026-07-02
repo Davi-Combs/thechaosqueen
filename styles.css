@@ -1,7 +1,7 @@
 
   .page-container {
-    width: auto;
-    height: auto;
+    width: 800px;
+    height: 1500px;
     background-color: black; /* Set your desired background color*/
     padding: 75px; /*Adjust as needed */
   }
