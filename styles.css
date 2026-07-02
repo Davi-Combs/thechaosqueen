@@ -74,6 +74,7 @@ transition: opacity 0.3s; /* Smooth transition */
   /* Adjust timing as needed */
 }
 
+
 @keyframes walk {
   0% {
     transform: translateX(0);
