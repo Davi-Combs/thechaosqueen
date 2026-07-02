@@ -47,27 +47,34 @@
     z-index:1;
     
   }
-  
-  spider {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  animation: walk 2s linear infinite alternate; 
-    transform: translateX(-50%);
-  width: 20px;
-  height: 20px; 
-  /* Adjust timing as needed */
-  }
+  .spider {
+   position: absolute;
+   top: 45px;
+   left: 50px;
+   animation: walk 2s linear infinite. 
+  alternate; 
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px; 
+
+  /* Adjust timing as needed */
+
+}
+
+
 @keyframes walk {
-  0% {
-    transform: translateX(0);
-  }
-  /*adjustspider*/
+ 0% {
+ transform: translateX(0);
+}
+100% {
+transform: translateX(calc(100% - 50pxy)); 
+
+ /*adjustspider*/
+}  
+
+</head>
   
 </style>
-  
-</head>
-
    
   <img src="images/spider.jpg" 
     alt="Spider" 
