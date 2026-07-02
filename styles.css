@@ -8,8 +8,17 @@
     /* CHANGE THIS: Allows the box to expand naturally */
     min-height: 100vh;    /* At bare minimum, fill the screen */
     height: auto;         /* If content (or bugs) push lower, stretch down! */
+}
 
-  }
+/*.your-black-container-class { 
+    background-color: black; 
+    position: relative; 
+    /* This is the anchor that traps the bugs inside! */
+    /* Keep your existing height, width, and margin rules here */
+}
+
+    
+  
 
  .grid-container {
     display: grid;
@@ -21,11 +30,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
+      position: relative; /* Establishes a stacking context /
+z-index: 1; / Pushes the container to the base layer */
     background-color: black; /* Set the background color for your grid items */
     border: 1px solid black; /* Add border for clarity */
     padding: 5px; 
     /* Add padding for spacing */
   }
+
+
+.container iframe {
+position: relative;
+z-index: 1; /* Keeps the iframe on the same base layer */
+    
+}
+
+.container img {
+position: absolute; /* Takes the image out of normal document flow /
+z-index: 2; / Higher number brings the image on top of the iframe */
+
+/* Add your desired positioning coordinates here */
+top: 10px;
+left: 20px;
+    
+}
 
   /* This targets all 10 bugs at once */
   .bug {
@@ -34,6 +62,7 @@
    pointer-events: none; /* Stops the bugs from blocking mouse clicks on your text/links */
     width: 50px; /*Sets standard width */
     height: 25px;  /*Sets standard height*/
+      
   }
 
 
@@ -84,7 +113,7 @@ transition: opacity 0.3s; /* Smooth transition */
   left: 5%;
   animation: walk 2s linear infinite alternate; 
     transform: translateX(-50%);
-  width: 300px;
+  width: 125px;
   height: 150px; 
   /* Adjust timing as needed */
 }
