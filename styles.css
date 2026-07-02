@@ -1,8 +1,8 @@
 
   .page-container {
     position: relative; overflow: hidden; 
-    width: 80%;
-    height: 80%;
+    width: 100vh;
+    height: 90%;
     background-color: black; /* Set your desired background color*/
     padding: 25px; /*Adjust as needed */
   }
