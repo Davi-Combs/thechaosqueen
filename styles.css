@@ -22,6 +22,16 @@
     /* Add padding for spacing */
   }
 
+#hackedPic {
+     position: fixed;
+     inset: 0;
+     width: 100vw;
+     height: 100vh;
+     object-fit: cover;
+    opacity: 0.5;
+    z-index: 9999;
+}
+
 /*.page-container {
     background-color: #f0f0f0; /* Set your desired background color
     padding: 20px; Adjust as needed 
@@ -40,14 +50,7 @@
     background-color: white; /* Set the background color for your grid items 
     border: 1px solid black; /Add border for clarity 
     padding: 20px; /* Add padding for spacing */
-  #hackedPic {
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-#hackedPic:hover {
-  opacity: 1;
-}
+  
 
 .spider {
   position: absolute;
