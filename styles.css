@@ -22,9 +22,9 @@
     /* Add padding for spacing */
   }
 
-#invisibleElement {
-opacity: 0; /* Start as invisible*/
-transition: opacity 0.3s; /* Smooth transition */
+ /*#invisibleElement {
+opacity: 0; /* Start as invisible
+transition: opacity 0.3s; /* Smooth transition 
 
 }
 
