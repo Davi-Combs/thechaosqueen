@@ -40,7 +40,14 @@
     background-color: white; /* Set the background color for your grid items 
     border: 1px solid black; /Add border for clarity 
     padding: 20px; /* Add padding for spacing */
-  
+  #hackedPic {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+#hackedPic:hover {
+  opacity: 1;
+}
 
 .spider {
   position: absolute;
