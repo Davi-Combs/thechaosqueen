@@ -1,25 +1,45 @@
 
-  .page-container {
+  /*.page-container {
     width: 900px;
     height: 1300px;
-    background-color: black; /* Set your desired background color */
-    padding: 75px; /* Adjust as needed */
+    background-color: black; /* Set your desired background color 
+    padding: 75px; Adjust as needed 
   }
 
   .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns */
-    gap: 5px; /* Adjust the gap between items */
+    grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns 
+    gap: 5px; /* Adjust the gap between items 
   }
 
   .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black; /* Set the background color for your grid items */
-    border: 1px solid black; /* Add border for clarity */
+    background-color: black; /* Set the background color for your grid items 
+    border: 1px solid black; /* Add border for clarity 
     padding: 10px; 
-    /* Add padding for spacing */
+    /* Add padding for spacing 
+  }*/
+
+.page-container {
+    background-color: #f0f0f0; /* Set your desired background color */
+    padding: 20px; /* Adjust as needed */
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns */
+    gap: 10px; /* Adjust the gap between items */
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white; /* Set the background color for your grid items */
+    border: 1px solid black; /* Add border for clarity */
+    padding: 20px; /* Add padding for spacing */
   }
 
 .spider {
