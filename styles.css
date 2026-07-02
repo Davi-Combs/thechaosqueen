@@ -109,12 +109,12 @@ transition: opacity 0.3s; /* Smooth transition */
 
 .spider {
   position: absolute;
-  top: 2%;
-  left: 5%;
+  top: 1%;
+  left: 1%;
   animation: walk 2s linear infinite alternate; 
     transform: translateX(-50%);
-  width: 125px;
-  height: 150px; 
+  width: 75px;
+  height: 100px; 
   /* Adjust timing as needed */
 }
 
