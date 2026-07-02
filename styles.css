@@ -1,12 +1,12 @@
 
-  /*.page-container {
+  .page-container {
     width: 900px;
     height: 1300px;
-    background-color: black; /* Set your desired background color 
-    padding: 75px; Adjust as needed 
+    background-color: black; /* Set your desired background color*/
+    padding: 75px; /*Adjust as needed */
   }
 
-  .grid-container {
+ /* .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns 
     gap: 5px; /* Adjust the gap between items 
@@ -22,10 +22,10 @@
     /* Add padding for spacing 
   }*/
 
-.page-container {
-    background-color: #f0f0f0; /* Set your desired background color */
-    padding: 20px; /* Adjust as needed */
-  }
+/*.page-container {
+    background-color: #f0f0f0; /* Set your desired background color
+    padding: 20px; Adjust as needed 
+  }*/
 
   .grid-container {
     display: grid;
