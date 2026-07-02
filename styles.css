@@ -24,13 +24,13 @@
   }
 
   /* This targets all 10 bugs at once */
-  /*.bug {
+  .bug {
     position: absolute;
     z-index: 99; /* Forces all bugs onto a high layer */
-  /*  pointer-events: none;  Stops the bugs from blocking mouse clicks on your text/links 
-    width: 50px; Sets standard width 
-    height: 25px;  Sets standard height
-  }*/
+   pointer-events: none; /* Stops the bugs from blocking mouse clicks on your text/links */
+    width: 50px; /*Sets standard width */
+    height: 25px;  /*Sets standard height*/
+  }
 
 
  /*#invisibleElement {
