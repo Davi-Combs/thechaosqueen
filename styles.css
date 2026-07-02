@@ -1,10 +1,14 @@
-
-  .page-container {
-    position: relative; overflow: hidden; 
+.page-container {
+    position: relative; 
+    overflow: hidden; 
     width: 80%;
-    height: 100vh;
-    background-color: black; /* Set your desired background color*/
-    padding: 25px; /*Adjust as needed */
+    margin: 0 auto;        /* Centers your 80% box on the screen */
+    background-color: #black;
+    
+    /* CHANGE THIS: Allows the box to expand naturally */
+    min-height: 100vh;    /* At bare minimum, fill the screen */
+    height: auto;         /* If content (or bugs) push lower, stretch down! */
+
   }
 
  .grid-container {
