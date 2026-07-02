@@ -2,7 +2,7 @@
   .page-container {
     position: relative; overflow: hidden; 
     width: auto;
-    height: 90%;
+    height: auto;
     background-color: black; /* Set your desired background color*/
     padding: 25px; /*Adjust as needed */
   }
