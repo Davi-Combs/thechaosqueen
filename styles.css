@@ -22,7 +22,18 @@
     /* Add padding for spacing */
   }
 
-#hackedPic {
+#invisibleElement {
+opacity: 0; /* Start as invisible*/
+transition: opacity 0.3s; /* Smooth transition */
+
+}
+
+#invisibleElement.visible {
+  opacity: 1;
+
+}
+  /* Make visible */ 
+/*#hackedPic {
      position: fixed;
      inset: 0;
      width: 100vw;
