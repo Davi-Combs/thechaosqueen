@@ -39,19 +39,19 @@ z-index: 1; / Pushes the container to the base layer */
   }
 
 
-/*.container iframe {
+.container iframe {
 position: relative;
 z-index: 1; /* Keeps the iframe on the same base layer */
     
 }
 
 .container img {
-position: absolute; /* Takes the image out of normal document flow /
-z-index: 2; / Higher number brings the image on top of the iframe */
+position: absolute; /* Takes the image out of normal document flow */
+z-index: 2; /* Higher number brings the image on top of the iframe */
 
 /* Add your desired positioning coordinates here */
-top: 10px;
-left: 20px;
+top: 10%;
+left: 20%;
     
 }
 
