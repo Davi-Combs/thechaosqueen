@@ -1,148 +1,402 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-
- html,
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Border Layout with Center</title>
+  <link rel="stylesheet" href="style.css">
+  <!--<style>
+    Basic reset and styling
 body {
-  background-color: black;
   margin: 0;
-} 
-  
-  
-  .page-container {
-  background-color: black;
-  padding: 20px;
-  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: black; /* Background color for the page */
 }
 
-  
+/* Grid container styling */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  max-width: 1000px;
-  margin: 0 auto;
+  grid-template-areas:
+    "top-left top-center top-right"
+    "middle-left center middle-right"
+    "bottom-left bottom-center bottom-right";
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  height: 100vh; /* Full viewport height */
+  gap: 10px; /* Space between items */
 }
 
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: pink;
-    border: 1px solid black;
-    min-width: 0;
-    overflow: hidden;
-    min-height: 220px; /* was 150px */
-    z-index:1;
-    /* Giving them a good height so the sites aren't cut off*/
-
-
-  
-  }
-  
-
-  /* Makes iframes fill the pink boxes completely */
-  
-  .container iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    z-index:1;
-  }
-
-  /* Makes the text in Item 4 bigger and easier to read */
-  .container p {
-    text-align: center;
-    width: 100%;
-    margin: 0;
-    font-size: 20px; 
-    font-weight: bold;
-    z-index:1;
-    
-  }
-  
-.spider {
-  position: fixed;
-  top: 45px;
-  left: -100px;
-  width: 75px;
-  height: 75px;
-  z-index: 99;
-  animation: walk 8s linear infinite;
+/* Grid item styling */
+.grid-item {
+  background-color: #333; /* Background color for grid items */
+  color: white; /* Text color for contrast */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 1px solid #444; /* Optional: border for better visibility */
 }
 
-@keyframes walk {
-  from {
-    left: -100px;
-  }
+/* Specific area styling */
+.top-left { grid-area: top-left; }
+.top-center { grid-area: top-center; }
+.top-right { grid-area: top-right; }
+.middle-left { grid-area: middle-left; }
+.center { grid-area: center; }
+.middle-right { grid-area: middle-right; }
+.bottom-left { grid-area: bottom-left; }
+.bottom-center { grid-area: bottom-center; }
+.bottom-right { grid-area: bottom-right; }
 
-  to {
-    left: 100vw;
-  }
-}
-
-
-
+  </style>-->
 </head>
-  
-</style>
-   
- 
 <body>
-<img src="images/spider.jpg" alt="Spider" class="spider">
-  
-  
-
-<img src="images/bugs_(1).jpg" 
- class="bug" 
-  width="40px"
-  height="40px" 
- style="top:10vh; left: 78vh;" 
-  alt="bug"
-  
-  <div class="page-container">
-
-
-  <div class="grid-container">
-    
-    <div class="container"><iframe src="https://vclock.com" frameborder="0"></iframe></div>
-
-    <div class="container"><iframe src="https://davi-combs.github.io/purplepassion/" overflow:hidden;
-    scrolling: yes;
-    allowfullscreen: yes; 
-    frameborder="0"></iframe></div>
-    
-    <div class="container"><iframe src="https://davi-combs.github.io/Minesweeper/" 
-       frameborder="0"></iframe></div>
-    
-    <div class="container"><widgetbot server="1191728009644879993"
-   	channel="1301038409913073675"
-    width="800"
-   height="600"> </widgetbot>
-   <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
-    </div>
  
-    <div class="container"><iframe src="https://davi-combs.github.io/Forddcombs/" 
- frameborder="0"></iframe></div>
-    
-    <div class="container"><iframe src="https://www.meteoblue.com/en/weather/maps/widget/evansville_united-states_4257227?windAnimation=1&gust=1&satellite=1&cloudsAndPrecipitation=1&temperature=1&sunshine=1&extremeForecastIndex=1&geoloc=fixed&tempunit=F&lengthunit=metric&windunit=mph&zoom=8&autowidth=auto&user_key=3333e7ecbbbd986b&embed_key=273ffe368f5218d8&sig=85fb6277c06bb043f01ea0c9cc464de648defbafc56a24bc2a8de3ab1934d2b7" frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox"></iframe></div>
-    
-    <div class="container"><iframe src="https://www.wikipedia.org" frameborder="0"></iframe></div>
-    
-    <div class="container"></div>
-    
-    <div class="container">
-      <widgetbot server="1191728009644879993"></widgetbot>
-      <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
-    </div>
-
+<img src="/storage/emulated/0/images/spider.png" 	
+           width="100"
+		  	       	height="100"
+	        alt="Crawling Spider" 
+	        class="walking-spider"
+		  		z-index: 99;">
   
-</div>
-
-
-<centet> <script src="https://minnit.chat/js/embed.js?c=1772345192" defer></script></center><span style="display: none;" class="minnit-chat-sembed" data-chatname="https://organizations.minnit.chat/254814601220149/c/Main?embed" data-style="width:90%; height:500px; max-height:90vh;" data-version="1.55">Chat</span><p class="powered-by-minnit"><a href="https://minnit.chat" target="_blank">Group chat provided by Minnit</a></p>
-
+  <img src="/storage/emulated/0/images/no09.png"
+                height="200"
+                width="200"
+                pointer-events: none;
+                style="position: absolute;
+                left: 10vh; top: 40vh;
+                	z-index: 999; alt="fing">
+  
+  
+   <img src="/storage/emulated/0/images/no07.png"
+                height="200"
+                width="200"
+                pointer-events: none;
+                style="position: absolute;
+                left: 80vh; top: 62vh;
+                	z-index: 999; alt="fing">
+  
+   <img src="/storage/emulated/0/images/no00.png"
+                height="200"
+                width="200"
+                pointer-events: none;
+                style="position: absolute;
+                left: 67vh; top: 43vh;
+                	z-index: 999; alt="fing">
+  
+  
+   <img src="/storage/emulated/0/images/no02.png"
+                height="200"
+                width="200"
+                pointer-events: none;
+                style="position: absolute;
+                left: 25vh; top: 12vh;
+                	z-index: 999; alt="fing">
+  
+   <img src="/storage/emulated/0/images/bug05.png"
+                height="300"
+                width="300"
+                pointer-events: none;
+                style="position: absolute;
+                left: 35vh; top: 94vh;
+                	z-index: 999; alt="fing">
+  
+   <img src="/storage/emulated/0/images/bug11.png"
+                height="150"
+                width="150"
+                pointer-events: none;
+                style="position: absolute;
+                left: 63vh; top: 30vh;
+                	z-index: 999; alt="fing">
+  
+   <img src="/storage/emulated/0/images/bug06.png"
+                height="200"
+                width="200"
+                pointer-events: none;
+                style="position: absolute;
+                left: 50vh; top: 50vh;
+                	z-index: 999; alt="fing">
+  
+  
+          <img src="/storage/emulated/0/images/bug02.png"
+                height="200"
+                width="200"
+                pointer-events: none;
+                style="position: absolute;
+                left: -1vh; top: 99vh;
+                	z-index: 999; alt="fing">                
+  
+  
+   <img src="/storage/emulated/0/images/no10.png"
+                height="200"
+                width="200"
+                pointer-events: none;
+                style="position: absolute;
+                left: 60vh; top: 10vh;
+                	z-index: 999; alt="fing">
+  
+   <img src="/storage/emulated/0/images/no08.png"
+                height="100"
+                width="100"
+                pointer-events: none;
+                style="position: absolute;
+                left: 5vh; top: 35vh;
+                	z-index: 999; alt="fing">
  
+ <div class="grid-container">
+    <div class="grid-item top-left"><iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs=timeline&width=600&height=600&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
+      width="450"
+      height="450" 
+      style="border:none;overflow:hidden" 
+      scrolling="yes" 
+      frameborder="0" 
+      allowfullscreen="yes" 
+      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe> </div>
+    <div class="grid-item top-center"><iframe src="https://vclock.com" 
+      width="450"
+      height="450"
+      frameborder="0"></iframe></div>
+    <div class="grid-item top-right"><iframe src="https://davi-combs.github.io/purplepassion/" 
+      width="450"
+      height="450"
+      frameborder="0"></iframe></div>
+    <div class="grid-item middle-left"><iframe src="https://davi-combs.github.io/Minesweeper/" 
+      width="450"
+      height="450"      
+      frameborder="0"></iframe></div>
+    <div class="grid-item center"><iframe src="https://davi-combs.github.io/Forddcombs/" 
+      width="450"
+      height="450"
+      frameborder="0"></iframe></div>
+    <div class="grid-item middle-right"><iframe src="https://www.meteoblue.com/en/weather/maps/widget/evansville_united-states_4257227?windAnimation=1&gust=1&satellite=1&cloudsAndPrecipitation=1&temperature=1&sunshine=1&extremeForecastIndex=1&geoloc=fixed&tempunit=F&lengthunit=metric&windunit=mph&zoom=8&autowidth=auto&user_key=3333e7ecbbbd986b&embed_key=273ffe368f5218d8&sig=85fb6277c06bb043f01ea0c9cc464de648defbafc56a24bc2a8de3ab1934d2b7"
+ width="450"
+  height="450"      
+      frameborder="0"
+      scrolling="NO" 
+      allowtransparency="true"
+      sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox"></iframe></div>
+    <div class="grid-item bottom-left"><iframe src="https://www.wikipedia.org" 
+      width="450"
+      height="450"
+      frameborder="0"></iframe></div>
+    <div class="grid-item bottom-center"><widgetbot
+  server="1191728009644879993"
+  width="450"
+  height="450"
+></widgetbot>
+<script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script></div>
+    <div class="grid-item bottom-right"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfD8K5NYSfHj3tEY1O5q3bkz_ABC1234/viewform?embedded=true" width="450"height="450" frameborder="0" marginheight="0" marginwidth="0"></iframe></div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Border Layout with Center</title>
+  <link rel="stylesheet" href="style.css">
+  <!--<style>
+    Basic reset and styling
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: black; /* Background color for the page */
+}
+
+/* Grid container styling */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "top-left top-center top-right"
+    "middle-left center middle-right"
+    "bottom-left bottom-center bottom-right";
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  height: 100vh; /* Full viewport height */
+  gap: 10px; /* Space between items */
+}
+
+/* Grid item styling */
+.grid-item {
+  background-color: #333; /* Background color for grid items */
+  color: white; /* Text color for contrast */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 1px solid #444; /* Optional: border for better visibility */
+}
+
+/* Specific area styling */
+.top-left { grid-area: top-left; }
+.top-center { grid-area: top-center; }
+.top-right { grid-area: top-right; }
+.middle-left { grid-area: middle-left; }
+.center { grid-area: center; }
+.middle-right { grid-area: middle-right; }
+.bottom-left { grid-area: bottom-left; }
+.bottom-center { grid-area: bottom-center; }
+.bottom-right { grid-area: bottom-right; }
+
+  </style>-->
+</head>
+<body>
+ 
+<img src="/storage/emulated/0/images/spider.png" 	
+           width="100"
+		  	       	height="100"
+	        alt="Crawling Spider" 
+	        class="walking-spider"
+		  		z-index: 99;">
+  
+  <img src="/storage/emulated/0/images/no09.png"
+                height="200"
+                width="200"
+                pointer-events: none;
+                style="position: absolute;
+                left: 10vh; top: 40vh;
+                	z-index: 999; alt="fing">
+  
+  
+   <img src="/storage/emulated/0/images/no07.png"
+                height="200"
+                width="200"
+                pointer-events: none;
+                style="position: absolute;
+                left: 80vh; top: 62vh;
+                	z-index: 999; alt="fing">
+  
+   <img src="/storage/emulated/0/images/no00.png"
+                height="200"
+                width="200"
+                pointer-events: none;
+                style="position: absolute;
+                left: 67vh; top: 43vh;
+                	z-index: 999; alt="fing">
+  
+  
+   <img src="/storage/emulated/0/images/no02.png"
+                height="200"
+                width="200"
+                pointer-events: none;
+                style="position: absolute;
+                left: 25vh; top: 12vh;
+                	z-index: 999; alt="fing">
+  
+   <img src="/storage/emulated/0/images/bug05.png"
+                height="300"
+                width="300"
+                pointer-events: none;
+                style="position: absolute;
+                left: 35vh; top: 94vh;
+                	z-index: 999; alt="fing">
+  
+   <img src="/storage/emulated/0/images/bug11.png"
+                height="150"
+                width="150"
+                pointer-events: none;
+                style="position: absolute;
+                left: 63vh; top: 30vh;
+                	z-index: 999; alt="fing">
+  
+   <img src="/storage/emulated/0/images/bug06.png"
+                height="200"
+                width="200"
+                pointer-events: none;
+                style="position: absolute;
+                left: 50vh; top: 50vh;
+                	z-index: 999; alt="fing">
+  
+  
+          <img src="/storage/emulated/0/images/bug02.png"
+                height="200"
+                width="200"
+                pointer-events: none;
+                style="position: absolute;
+                left: -1vh; top: 99vh;
+                	z-index: 999; alt="fing">                
+  
+  
+   <img src="/storage/emulated/0/images/no10.png"
+                height="200"
+                width="200"
+                pointer-events: none;
+                style="position: absolute;
+                left: 60vh; top: 10vh;
+                	z-index: 999; alt="fing">
+  
+   <img src="/storage/emulated/0/images/no08.png"
+                height="100"
+                width="100"
+                pointer-events: none;
+                style="position: absolute;
+                left: 5vh; top: 35vh;
+                	z-index: 999; alt="fing">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+		  	
+<div class="grid-container">
+    <div class="grid-item top-left"><iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs=timeline&width=600&height=600&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
+      width="450"
+      height="450" 
+      style="border:none;overflow:hidden" 
+      scrolling="yes" 
+      frameborder="0" 
+      allowfullscreen="yes" 
+      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe> </div>
+    <div class="grid-item top-center"><iframe src="https://vclock.com" 
+      width="450"
+      height="450"
+      frameborder="0"></iframe></div>
+    <div class="grid-item top-right"><iframe src="https://davi-combs.github.io/purplepassion/" 
+      width="450"
+      height="450"
+      frameborder="0"></iframe></div>
+    <div class="grid-item middle-left"><iframe src="https://davi-combs.github.io/Minesweeper/" 
+      width="450"
+      height="450"      
+      frameborder="0"></iframe></div>
+    <div class="grid-item center"><iframe src="https://davi-combs.github.io/Forddcombs/" 
+      width="450"
+      height="450"
+      frameborder="0"></iframe></div>
+    <div class="grid-item middle-right"><iframe src="https://www.meteoblue.com/en/weather/maps/widget/evansville_united-states_4257227?windAnimation=1&gust=1&satellite=1&cloudsAndPrecipitation=1&temperature=1&sunshine=1&extremeForecastIndex=1&geoloc=fixed&tempunit=F&lengthunit=metric&windunit=mph&zoom=8&autowidth=auto&user_key=3333e7ecbbbd986b&embed_key=273ffe368f5218d8&sig=85fb6277c06bb043f01ea0c9cc464de648defbafc56a24bc2a8de3ab1934d2b7"
+ width="450"
+  height="450"      
+      frameborder="0"
+      scrolling="NO" 
+      allowtransparency="true"
+      sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox"></iframe></div>
+    <div class="grid-item bottom-left"><iframe src="https://www.wikipedia.org" 
+      width="450"
+      height="450"
+      frameborder="0"></iframe></div>
+    <div class="grid-item bottom-center"><widgetbot
+  server="1191728009644879993"
+  width="450"
+  height="450"
+></widgetbot>
+<script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script></div>
+    <div class="grid-item bottom-right"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfD8K5NYSfHj3tEY1O5q3bkz_ABC1234/viewform?embedded=true" width="450"height="450" frameborder="0" marginheight="0" marginwidth="0"></iframe></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
