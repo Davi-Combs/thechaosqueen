@@ -17,6 +17,7 @@ body {
   gap: 10px; /* Space between items */
   align-items: stretch; 
   justify-items: stretch;
+  z-index: 1;
 }
 
 /* Grid item styling */
@@ -27,8 +28,8 @@ body {
   align-items: center;
   justify-content: center;
   padding: 10px;
-  border: 0px solid #ddd; /* Optional: border for better visibility */
-
+  border: 0px solid #fff; /* Optional: border for better visibility */
+  z-index: 1;
   
 }
   /*Force the iframe to occupy the full width and height of its grid cell */
@@ -71,7 +72,8 @@ transform: translateY(0); } }
                                                                       
                                       } }*/
   
-  
+
+
 
 .spider {
   position: absolute;
@@ -93,13 +95,4 @@ transform: translateY(0); } }
     
     
     
-    
-    .spider {
-      position: absolute;
-      top: 0;
-      left: 50%; /*Position the spider at the center horizontally */
-      transform:
-      translateX(-50%); /*Adjust to center the spider */
-      width: 900px; /*Adjusted to match spider width */
-      height: 1100px; /*Adjusted to match spider height */}
-  
+
