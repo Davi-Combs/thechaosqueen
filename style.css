@@ -1,123 +1,88 @@
-.page-container {
-    position: relative; 
-    overflow: hidden; 
-    width: 90%;
-    margin: 0 auto;        /* Centers your 80% box on the screen */
-    background-color: #black;
-    
-    /* CHANGE THIS: Allows the box to expand naturally */
-    min-height: 100vh;    /* At bare minimum, fill the screen */
-    height: auto;         /* If content (or bugs) push lower, stretch down! */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: black; /* Background color for the page */
 }
 
-/*.your-black-container-class { 
-    background-color: black; 
-    position: relative; 
-    /* This is the anchor that traps the bugs inside! */
-    /* Keep your existing height, width, and margin rules here */
+/* Grid container styling */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "top-left top-center top-right"
+    "middle-left center middle-right"
+    "bottom-left bottom-center bottom-right";
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  height: 100vh; /* Full viewport height */
+  gap: 10px; /* Space between items */
+  align-items: stretch; 
+  justify-items: stretch;
 }
 
-    
+/* Grid item styling */
+.grid-item {
+  background-color: #black; /* Background color for grid items */
+  color: white; /* Text color for contrast */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 0px solid #ddd; /* Optional: border for better visibility */
+
   
-
- .grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns*/ 
-    gap: 2px; /* Adjust the gap between items */
-  }
-
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-      position: relative; /* Establishes a stacking context /
-z-index: 1; / Pushes the container to the base layer */
-    background-color: black; /* Set the background color for your grid items */
-    border: 1px solid black; /* Add border for clarity */
-    padding: 5px; 
-    /* Add padding for spacing */
-  }
-
-
-.container iframe {
-position: relative;
-z-index: 1; /* Keeps the iframe on the same base layer */
-    
 }
-
-.container img {
-position: absolute; /* Takes the image out of normal document flow */
-z-index: 2; /* Higher number brings the image on top of the iframe */
-
-/* Add your desired positioning coordinates here */
-top: 10%;
-left: 20%;
-    
-}
-
-  /* This targets all 10 bugs at once */
-  .bug {
-    position: absolute;
-    z-index: 99; /* Forces all bugs onto a high layer */
-   pointer-events: none; /* Stops the bugs from blocking mouse clicks on your text/links */
-    width: 75px; /*Sets standard width */
-    height: 75px;  /*Sets standard height*/
-      
-  }
-
-
- #invisibleElement {
-opacity: 0; /* Start as invisible*/
-transition: opacity 0.3s; /* Smooth transition */
+  /*Force the iframe to occupy the full width and height of its grid cell */
+/*.grid-item iframe {
+    width: 100%;
+    height: 200vh;
+    border: none; /* Optional: removes default border 
+    display: block; /* Prevents tiny gaps at the bottom of the frame */
 
 }
 
-#invisibleElement.visible {
-  opacity: 1;
+/* Specific area styling */
+.top-left { grid-area: top-left; }
+.top-center { grid-area: top-center; }
+.top-right { grid-area: top-right; }
+.middle-left { grid-area: middle-left; }
+.center { grid-area: center; }
+.middle-right { grid-area: middle-right; }
+.bottom-left { grid-area: bottom-left; }
+.bottom-center { grid-area: bottom-center; }
+.bottom-right { grid-area: bottom-right; }
+.middle-right { grid-area: middle-right; }
+.bottom-left { grid-area: bottom-left; }
+.bottom-center { grid-area: bottom-center; }
+.bottom-right { grid-area: bottom-right; }
 
 }
-  /* Make visible */ 
-#hackedPic {
-     position: fixed;
-     inset: 0;
-     width: 100vw;
-     height: 100vh;
-     object-fit: cover;
-    opacity: 0.5;
-    z-index: 9999;
-}
 
-/*.page-container {
-    background-color: #f0f0f0; /* Set your desired background color
-    padding: 20px; Adjust as needed 
-  }
-
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns 
-    gap: 10px; Adjust the gap between items 
-  }
-
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white; /* Set the background color for your grid items 
-    border: 1px solid black; /Add border for clarity 
-    padding: 20px; /* Add padding for spacing */
+/*.walking-spider { position: fixed; top: 0; left: -150px; 
+  z-index: 9999;
+  width: 100px; 
+animation: crawl 12s linear infinite, walk 0.5s ease-in-out infinite alternate;
+  
+/* Controls the spider moving across the screen *
+@keyframes crawl { 0% { left: -150px; transform: translateY(0); } 100% { left: 100vw; 
+            
+transform: translateY(0); } }
+/* Controls the up/down walking motion (legs/body) *
+@keyframes walk { 0% { transform: translateY(0) rotate(0deg); } 100% { transform: translateY(-10px) rotate(5deg); 
+                                                                      
+                                      } }*/
+  
   
 
 .spider {
   position: absolute;
-  top: 1%;
-  left: 1%;
+  top: 45px;
+  left: 50%;
   animation: walk 2s linear infinite alternate; 
     transform: translateX(-50%);
-  width: 75px;
+  width: 100px;
   height: 100px; 
   /* Adjust timing as needed */
 }
-
 
 @keyframes walk {
   0% {
@@ -125,6 +90,16 @@ transition: opacity 0.3s; /* Smooth transition */
   }
   100% {
     transform: translateX(calc(100% - 50px)); 
-   
-    */adjustspider/*
-  }
+    
+    
+    
+    
+    .spider {
+      position: absolute;
+      top: 0;
+      left: 50%; /*Position the spider at the center horizontally */
+      transform:
+      translateX(-50%); /*Adjust to center the spider */
+      width: 900px; /*Adjusted to match spider width */
+      height: 1100px; /*Adjusted to match spider height */}
+  
